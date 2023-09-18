@@ -8,6 +8,11 @@ body {
 	font-style: normal;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* Header */
 
 .top-header {
@@ -75,7 +80,6 @@ body {
 }
 
 .picture img {
-	width: 100%;
 	object-fit: cover;
 }
 
@@ -111,8 +115,6 @@ body {
 /* Quote */
 
 .quote {
-	font-family: 'Spectral';
-	font-style: italic;
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
@@ -185,7 +187,8 @@ body {
 
 .gallery-items-row {
   overflow: hidden;
-  transition: width 0.5s ease; 
+  transition: width 0.5s ease;
+	margin: 0;
 }
 
 .gallery-items-row.active {
@@ -194,16 +197,6 @@ body {
 
 .gallery .nav {
 	justify-content: center;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #466291;
-	border-radius:0 ;
-}
-
-.nav-pills .nav-link {
-	color: #000
 }
 
 .item-column {
@@ -225,16 +218,6 @@ body {
 	object-fit: cover;
 	padding: .5em;
 	cursor: pointer;
-}
-
-.mg-prev, .mg-next {
-	width: 30px;
-	height: 30px;
-	border-radius: 00%;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	font-size: 24px;
 }
 
 /* Services */
@@ -350,11 +333,6 @@ input[type="submit"] {
 	#about-me h6, #about-me p {
 		width: 100%;
 	}
-
-	#about-me h1 {
-		text-align: center;
-		margin-top: 1em;
-	}
 }
 
 @media all and (max-width: 1000px) {
@@ -379,6 +357,7 @@ input[type="submit"] {
 	.about-me__title{
 		text-align: center;
 		margin-top: 1em;
+		font-size: 1.5rem;
 	}
 
 	#services .container {
@@ -420,6 +399,11 @@ input[type="submit"] {
 		bottom: 0;
 		right: 0;
 		z-index: -1;
+	}
+
+	#about-me h1 {
+		text-align: center;
+		margin-top: 1em;
 	}
 }
 
@@ -464,7 +448,7 @@ input[type="submit"] {
 	form {
 		width: 100%;
 	}
-	
+
 	.picture {
 		width: 80%;
 	}
