@@ -31,6 +31,8 @@ export function lightBox() {
 
   const galleryData = getGalleryData();
 
+  console.log(galleryData);
+
   const showCurrentImage = () => {
     const modalImage = document.querySelector("#modal-image");
     modalImage.setAttribute("src", currentImages[currentIndex].src);
@@ -40,14 +42,10 @@ export function lightBox() {
   const updateCurrentImages = (filterSelected, item) => {
     if (filterSelected.textContent === "Tous") {
       //Creating a table with all images
-      currentImages = galleryData.flatMap((categoryData) => {
-        return categoryData.images.map((imageData) => {
-          return {
-            src: imageData.src,
-            alt: imageData.alt,
-          };
-        });
-      });
+      currentImages = Array.from(galleryItems).map((item) => ({
+        src: item.getAttribute("src"),
+        alt: item.getAttribute("alt"),
+      }));
     } else {
       //Creating a table with images that belong to the selected category
       const category = item.getAttribute("data-gallery-tag");

@@ -48,6 +48,7 @@ export function filters() {
         //Transition effect
         galleryItemsRow.style.transition = "none";
         galleryItemsRow.style.width = "0";
+        //Forces the browser to recalculate the width of galleryItemsRow
         galleryItemsRow.offsetWidth;
         galleryItemsRow.style.transition = "width 0.5s ease";
         galleryItemsRow.style.width = "100%";
