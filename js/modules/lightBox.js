@@ -31,8 +31,6 @@ export function lightBox() {
 
   const galleryData = getGalleryData();
 
-  console.log(galleryData);
-
   const showCurrentImage = () => {
     const modalImage = document.querySelector("#modal-image");
     modalImage.setAttribute("src", currentImages[currentIndex].src);
